@@ -135,6 +135,14 @@
                     const year = dateList[2]
 
                     // construct styled string to be displayed in InfoWindow
+                    
+                    const content = 
+                    `<b>Event: </b>${event.title}<br>
+                    <b>Host: </b>${event.host}<br>
+                    <b>Start Time: </b>${event.startHour}:${event.startMinute} ${event.startTimeOfDay}<br>
+                    <b>End Time: </b>${event.endHour}:${event.endMinute} ${event.endTimeOfDay}<br>
+                    <b>Location Description: </b>${event.locationDesc}<br>
+                    <b>Description: </b>${event.eventDesc}<br>`
                     const contentString =
                         `<h2>${event.title}</h2>
                 <div>
@@ -154,7 +162,7 @@
                     </p>
                 </div>`
                     // set content of pop up window to the styled string
-                    infoWindow.setContent(contentString)
+                    infoWindow.setContent(content)
 
                     // add marker to map with provided coordinates
                     const marker = new google.maps.Marker({
