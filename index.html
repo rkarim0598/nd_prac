@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <style>
         #map {
-            height: 400px;
+            height: 100vh;
             width: 100%;
         }
     </style>
@@ -135,9 +134,9 @@
                     const year = dateList[2]
 
                     // construct styled string to be displayed in InfoWindow
-                    
-                    const content = 
-                    `<b>Event: </b>${event.title}<br>
+
+                    const content =
+                        `<b>Event: </b>${event.title}<br>
                     <b>Host: </b>${event.host}<br>
                     <b>Start Time: </b>${event.startHour}:${event.startMinute} ${event.startTimeOfDay}<br>
                     <b>End Time: </b>${event.endHour}:${event.endMinute} ${event.endTimeOfDay}<br>
